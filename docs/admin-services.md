@@ -1,17 +1,17 @@
 # Start or Stop the Services
 
-These commands are required when you use the RabbitMQ of Websoft9.
+These commands are required when you use the CloudBeaver of Websoft9.
 
-### RabbitMQ
+### CloudBeaver
 
 ```shell
-sudo systemctl start rabbitmq-server
-sudo systemctl stop rabbitmq-server
-sudo systemctl restart rabbitmq-server
-sudo systemctl status rabbitmq-server
+sudo systemctl start cloudbeaver-server
+sudo systemctl stop cloudbeaver-server
+sudo systemctl restart cloudbeaver-server
+sudo systemctl status cloudbeaver-server
 
-# you can use this debug mode if RabbitMQ service can't run
-rabbitmq-server console
+# you can use this debug mode if CloudBeaver service can't run
+cloudbeaver-server console
 ```
 
 ### MySQL

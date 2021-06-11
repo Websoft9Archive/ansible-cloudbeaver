@@ -3,12 +3,15 @@ module.exports = [
         title: 'Getting Started',
         collapsable: false,
         children: [
-          '/',
-          '/stack-deployment',
-          '/stack-installation',
-          '/stack-components',
-          '/stack-accounts',
-          ['https://support.websoft9.com/docs/faq/tech-instance.html','Cloud Server'],
+          '/solution-mysql',
+          '/solution-postgresql',
+          '/solution-sqlserver',
+          '/solution-sqlite',
+          '/solution-oracle',
+          '/solution-https',
+          '/solution-backup',
+          '/solution-upgrade',
+          '/solution-more',
         ]
       },
       {
@@ -29,7 +32,6 @@ module.exports = [
         collapsable: false,
         children: [
           '/admin-services',
-          '/admin-mysql',
           ['https://support.websoft9.com/docs/linux/webs-nginx.html','Nginx'],
           ['https://support.websoft9.com/docs/linux/admin-practices.html','Linux'],
         ]

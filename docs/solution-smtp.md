@@ -1,6 +1,6 @@
 # SMTP
 
-Sending mail is a common feature for RabbitMQ. With a large number of users' practice and feedback, only one way is recommended, that is, using the **third-party SMTP service** to send the email.
+Sending mail is a common feature for CloudBeaver. With a large number of users' practice and feedback, only one way is recommended, that is, using the **third-party SMTP service** to send the email.
 
 > Do not try to install **Sendmail** or other Mail server software on your Cloud Server for sending mail, because it has great difficulty in maintenance.
 
@@ -15,7 +15,7 @@ Taking **SendGrid's SMTP Service** as an example, refer to the following steps t
    SMTP username: websoft9smtp
    SMTP password: #fdfwwBJ8f    
    ```
-2. Log in RabbitMQ Console.
+2. Log in CloudBeaver Console.
 3. Enter the SMTP settings.
 ![Metabase SMTP](https://libs.websoft9.com/Websoft9/DocsPicture/en/metabase/metabase-smtp-websoft9.png)
 4. Click the **Test Connection**. You will get the feedback *"no errors were..."* if SMTP is valid.

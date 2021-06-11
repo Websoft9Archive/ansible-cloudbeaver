@@ -1,27 +1,37 @@
 # FAQ
 
-#### RabbitMQ 是否支持多语言？
+#### CloudBeaver 是否支持多语言？
 
-支持
+支持（包含中文）后台直接切换语言，但目前中文语言包不完整
 
-#### 本项目中 RabbitMQ 采用何种安装方式？
+#### CloudBeaver 支持哪些数据库？
 
-采用 rpm/deb 包的安装方式
+默认支持 
 
-#### 如何以调试模式启动RabbitMQ服务？
+#### 本项目中 CloudBeaver 采用何种安装方式？
 
-```
-systemctl stop rabbitmq-server
-rabbitmq-server console
-```
+Docker
 
-#### 是否可以通过命令行修改RabbitMQ后台密码？
+#### CloudBeaver 采用何种驱动连接数据库？
 
-可以，`rabbitmqctl change_password  admin newpassword`
+JDBC 驱动
 
-#### 如果没有域名是否可以部署 RabbitMQ？
+
+#### 是否可以通过命令行修改CloudBeaver后台密码？
+
+不可以，只支持控制台修改
+
+#### CloudBeaver 是否支持创建数据库？
+
+暂未发现此功能
+
+#### 如果没有域名是否可以部署 CloudBeaver？
 
 可以，访问`http://服务器公网IP` 即可
+
+#### 如何更改 CloudBeaver 的默认方式方式
+
+修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的 `listen 80` 修改成类似 `listen 8090` 即可
 
 #### 数据库 root 用户对应的密码是多少？
 
@@ -35,7 +45,7 @@ rabbitmq-server console
 
 连接服务器，编辑 [phpMyAdmin 配置文件](/zh/stack-components.md#phpmyadmin)，将其中的 `Require all granted` 更改为 `Require ip 192.160.1.0`，然后重启 Apache 服务
 
-#### 是否可以修改RabbitMQ的源码路径？
+#### 是否可以修改CloudBeaver的源码路径？
 
 不可以
 
@@ -43,7 +53,7 @@ rabbitmq-server console
 
 ```shell
 # 拥有者
-chown -R apache.apache /data/wwwroot/
+chown -R nginx.nginx /data/wwwroot/
 # 读写执行权限
 find /data/wwwroot/ -type d -exec chmod 750 {} \;
 find /data/wwwroot/ -type f -exec chmod 640 {} \;

@@ -1,8 +1,8 @@
 # SSL/HTTPS
 
-Before setting, you have to complete [binding domain](/solution-more.md) and make sure you can access RabbitMQ by HTTP.
+Before setting, you have to complete [binding domain](/solution-more.md) and make sure you can access CloudBeaver by HTTP.
 
-RabbitMQ deployment package has installed the SSL module of Nginx and open Certificate Authority **[Let's Encrypt](https://letsencrypt.org/)** for you to configure the HTTPS quickly and conveniently.
+CloudBeaver deployment package has installed the SSL module of Nginx and open Certificate Authority **[Let's Encrypt](https://letsencrypt.org/)** for you to configure the HTTPS quickly and conveniently.
 
 > Except for the [vhost configuration file](/stack-components.md#nginx), it doesn't need modify any Nginx configuration file for HTTPS.
 

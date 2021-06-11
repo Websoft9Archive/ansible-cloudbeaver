@@ -1,6 +1,6 @@
 # MongoDB
 
-RabbitMQ deployment package includes MongoDB and Web-GUI tool adminMongo, refer to these steps to use it:
+CloudBeaver deployment package includes MongoDB and Web-GUI tool adminMongo, refer to these steps to use it:
 
 1. Log in Cloud Console, make sure the **TCP:9091** port is allowed on **[Inbound of Security Group Rule](https://support.websoft9.com/docs/faq/tech-instance.html)**
 

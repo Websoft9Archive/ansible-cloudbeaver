@@ -6,11 +6,11 @@
 - 操作系统打个补丁常称之为**更新**，Ubuntu16.04 变更为 Ubuntu18.04，称之为**升级**
 - MySQL5.6.25-->MySQL5.6.30 常称之为**更新**，MySQL5.6->MySQL5.7 称之为**升级**
 
-RabbitMQ 完整的更新升级包括：系统级更新（操作系统和运行环境）和 RabbitMQ 程序升级两种类型
+CloudBeaver 完整更新升级包括：系统级更新（操作系统和运行环境）和 CloudBeaver 程序升级两种类型
 
 ## 系统级更新
 
-运行一条更新命令，即可完成系统级（包含RabbitMQ小版本更新）更新：
+运行一条更新命令，即可完成系统级（包含CloudBeaver小版本更新）更新：
 
 ``` shell
 #For Ubuntu&Debian
@@ -22,22 +22,22 @@ yum update -y --skip-broken
 > 本部署包已预配置一个用于自动更新的计划任务。如果希望去掉自动更新，请删除对应的Cron
 
 
-## RabbitMQ 升级
+## CloudBeaver 升级
 
-RabbitMQ 基于 Docker 部署，其升级流程：拉取镜像 > 删除容器 > 重建容器
+CloudBeaver 基于 Docker 部署，其升级流程：拉取镜像 > 删除容器 > 重建容器
 
 > 升级之前请确保您已经完成了服务器的镜像（快照）备份
 
-1. 登录服务器，编辑 */data/wwwroot/rabbitmq/.env* 文件，将版本变量的值修改为目标版本号
+1. 登录服务器，编辑 */data/wwwroot/cloudbeaver/.env* 文件，将版本变量的值修改为目标版本号
 
 2. 拉取目标版本的镜像
    ```
-   cd /data/wwwroot/rabbitmq
+   cd /data/wwwroot/cloudbeaver
    docker-compose pull
    ```
    > 如果显示没有镜像可拉取，则无需升级
 
-3. 删除旧容器，重新创建 RabbitMQ 容器
+3. 删除旧容器，重新创建 CloudBeaver 容器
     ```
     docker-compose down -v
     docker-compose up -d

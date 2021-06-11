@@ -2,7 +2,7 @@
 # Task priority: pre_tasks > role > tasks > post_task
 # Variable priority: vars_files > vars
 
-- name: RabbitMQ
+- name: CloudBeaver
   hosts: all
   become: yes
   become_method: sudo

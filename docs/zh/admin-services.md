@@ -1,53 +1,14 @@
 # 服务启停
 
-使用由Websoft9提供的 RabbitMQ 部署方案，可能需要用到的服务如下：
+使用由Websoft9提供的 CloudBeaver 部署方案，可能需要用到的服务如下：
 
-### RabbitMQ
-
-```shell
-sudo systemctl start rabbitmq-server
-sudo systemctl stop rabbitmq-server
-sudo systemctl restart rabbitmq-server
-sudo systemctl status rabbitmq-server
-
-# you can use this debug mode if RabbitMQ service can't run
-rabbitmq-server console
-```
-
-### MySQL
+### CloudBeaver
 
 ```shell
-sudo systemctl start mysql
-sudo systemctl stop mysql
-sudo systemctl restart mysql
-sudo systemctl status mysql
-```
-
-### MySQL on Docker
-
-```shell
-sudo docker start redmine-mysql
-sudo docker restart redmine-mysql
-sudo docker stop redmine-mysql
-sudo docker stats redmine-mysql
-```
-
-### Redis
-
-```shell
-systemctl start redis
-systemctl stop redis
-systemctl restart redis
-systemctl status redis
-```
-
-### phpMyAdmin
-
-```shell
-sudo docker start phpmyadmin
-sudo docker stop phpmyadmin
-sudo docker restart phpmyadmin
-sudo docker stats pgadmin
+sudo docker start cloudbeaver
+sudo docker stop cloudbeaver
+sudo docker restart cloudbeaver
+sudo docker stats cloudbeaver
 ```
 
 ### Docker

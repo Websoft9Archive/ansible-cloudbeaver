@@ -1,10 +1,6 @@
 # 更多...
 
-下面每一个方案，都经过实践证明行之有效，希望能够对你有帮助
-
-## 配置
-
-参考官方方案：https://www.rabbitmq.com/configure.html
+下面每一个方案，都经过实践证明行之有效，希望能够对你有帮助。
 
 ## 域名绑定
 
@@ -12,7 +8,7 @@
 
 完成域名解析后，从服务器安全和后续维护考量，需要完成**域名绑定**：
 
-RabbitMQ 域名绑定操作步骤：
+CloudBeaver 域名绑定操作步骤：
 
 1. 确保域名解析已经生效  
 2. 使用 SFTP 工具登录云服务器
@@ -21,7 +17,7 @@ RabbitMQ 域名绑定操作步骤：
    server
    {
    listen 80;
-   server_name rabbitmq.yourdomain.com;  # 此处修改为你的域名
+   server_name cloudbeaver.yourdomain.com;  # 此处修改为你的域名
    ...
    }
    ```
@@ -29,21 +25,33 @@ RabbitMQ 域名绑定操作步骤：
 
 ## 重置密码
 
-常用的 RabbitMQ 重置密码相关的操作主要有修改密码和找回密码两种类型：
+常用的 CloudBeaver 重置密码相关的操作主要有修改密码和找回密码两种类型：
 
 ### 修改密码
 
-1. 登录 RabbitMQ 后台，依次打开：【Manage】>【Staff】，找到所需修改密码的账号对象
-  ![RabbitMQ 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/rabbitmq/rabbitmq-modifypw001-websoft9.png)
+1. 登录 CloudBeaver 后台，右上角打开：【Administrator】>【User】，找到所需修改密码的账号对象
+  ![CloudBeaver 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-modifypw-websoft9.png)
 
-2. 开始修改密码
-  ![RabbitMQ 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/rabbitmq/rabbitmq-modifypw002-websoft9.png)
+2. 开始修改密码，点击【Save】后生效
 
 ### 找回密码
 
-如果用户忘记了密码，建议通过邮件的方式找回密码：
+如果用户忘记了密码，只能通过重置 CloudBeaver 容器的方式找回：
 
-1. 完成 [SMTP 设置](/zh/solution-smtp.md)
+1. 使用 SSH 工具连接  CloudBeaver 服务器
 
-2. 打开 RabbitMQ 登录页面，点击【Forgot】开始通过邮件找回密码
-  ![Ghost 找回密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/rabbitmq/rabbitmq-forgetpw-websoft9.png)
+2. 依次运行下面的命令
+   ```
+   cd /data/apps/cloudbeaver
+   docker-compose down -v
+   docker-compose pull
+   docker-compose up -d
+   ```
+
+## 驱动管理
+
+参考官方文档[Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
+
+## 导出数据
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-exportdata-websoft9.png)

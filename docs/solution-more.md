@@ -4,15 +4,15 @@ Each of the following solutions has been proved to be effective and we hope it c
 
 ## Configuration 
 
-Refer to the official docs: https://www.rabbitmq.com/configure.html
+Refer to the official docs: https://www.cloudbeaver.com/configure.html
 
 ## Binding Domain
 
-The precondition for binding a domain is that RabbitMQ can accessed by domain name.
+The precondition for binding a domain is that CloudBeaver can accessed by domain name.
 
 When there is only one website on the server, you can visit the website without binding domain. While considering the server security and subsequent maintenance, **Binding Domain** is necessary.
 
-Steps for binding RabbitMQ domain are as follows:
+Steps for binding CloudBeaver domain are as follows:
 
 1. Connect your Cloud Server;
 2. Modify [Nginx vhost configuration file](/stack-components.md#nginx),and change the **server_name**'s value to your domain name.
@@ -37,7 +37,7 @@ There are two main measures to reset password.
 
 Take the steps below:
 
-1. log in the RabbitMQ backend, open 【Manage】>【Staff】 and find the user account, of which you want to change password;
+1. log in the CloudBeaver backend, open 【Manage】>【Staff】 and find the user account, of which you want to change password;
 
 2. start to change the password.
 

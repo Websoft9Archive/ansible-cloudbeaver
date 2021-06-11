@@ -4,28 +4,23 @@ sidebarDepth: 3
 
 # 参数
 
-RabbitMQ 预装包包含 RabbitMQ 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
+CloudBeaver 预装包包含 CloudBeaver 运行所需一序列支撑软件（简称为“组件”），下面列出主要组件名称、安装路径、配置文件地址、端口、版本等重要的信息。
 
 ## 路径
 
-本部署方案中的 RabbitMQ 采用 Docker 部署，运行 `docker ps` 查看运行的容器。
+本部署方案中的 CloudBeaver 采用 Docker 部署，运行 `docker ps` 查看运行的容器。
 ```
-CONTAINER ID   IMAGE                           COMMAND                  CREATED              STATUS                PORTS                               NAMES
-4ff55aec7671   rabbitmq                         "/docker-entrypoint.…"   11 seconds ago       Up 10 seconds         0.0.0.0:9010->3000/tcp              rabbitmq
-3067c535663b   mysql:5.7                       "docker-entrypoint.s…"   About a minute ago   Up 58 seconds         33060/tcp, 0.0.0.0:3309->3306/tcp   rabbitmq-mysql
+CONTAINER ID   IMAGE                        COMMAND             CREATED       STATUS       PORTS                                       NAMES
+34baab38d75f   dbeaver/cloudbeaver:latest   "./run-server.sh"   3 hours ago   Up 3 hours   0.0.0.0:8080->8978/tcp, :::8080->8978/tcp   cloudbeaver
 ```
 
-### RabbitMQ
+### CloudBeaver
 
-RabbitMQ 安装目录： */data/rabbitmq*  
-RabbitMQ 日志目录： */data/logs/rabbitmq*  
+CloudBeaver 安装目录： */data/apps/cloudbeaver*  
+CloudBeaver 存储目录： */data/apps/cloudbeaver/volumes*  
+CloudBeaver 配置文件： */data/apps/cloudbeaver/volumes/GlobalConfiguration/.dbeaver/data-sources.json*  
 
-### Apache
-
-Apache 虚拟主机配置文件：*/etc/httpd/conf.d/vhost.conf*  
-Apache 主配置文件： */etc/httpd/conf/httpd.conf*  
-Apache 日志文件： */var/log/httpd*  
-Apache 模块配置文件： */etc/httpd/conf.modules.d/00-base.conf*
+> data-sources.json 存放数据库连接信息
 
 ### Nginx
 
@@ -34,34 +29,6 @@ Nginx 主配置文件： */etc/nginx/nginx.conf*
 Nginx 日志文件： */var/log/nginx*  
 Nginx 伪静态规则目录： */etc/nginx/conf.d/rewrite*  
 Nginx 验证访问文件：*/etc/nginx/.htpasswd/htpasswd.conf*  
-
-### MySQL
-
-MySQL 安装路径: */usr/local/mysql*  
-MySQL 数据文件 */data/mysql*  
-MySQL 配置文件: */etc/my.cnf*  
-
-MySQL 可视化管理参考 [MySQL 管理](/zh/admin-mysql.md) 章节。
-
-### phpMyAdmin
-
-phpMyAdmin 是一款可视化 MySQL 管理工具，在本项目中它基于 Docker 安装。  
-
-phpMyAdmin directory：*/data/apps/phpmyadmin*  
-phpMyAdmin docker compose file：*/data/apps/phpmyadmin/docker-compose.yml* 
-
-### MongoDB
-
-MongoDB 数据目录: */var/lib/mongodb*  
-MongoDB 配置文件: */etc/mongod.conf*  
-MongoDB 日志文件: */var/log/mongodb*  
-
-### adminMongo on Docker
-
-adminMongo 是一款可视化 MongoDB 管理工具，采用 Docker 安装
-
-Docker 根目录: */var/lib/docker*  
-Docker 镜像目录: */var/lib/docker/image*  
 
 ### Docker
 
@@ -83,9 +50,9 @@ Redis 日志文件： */var/log/redis/redis.log*
 
 | 名称 | 端口号 | 用途 |  必要性 |
 | --- | --- | --- | --- |
-| TCP | 15672 | 通过 HTTP 访问 RabbitMQ 控制台 | 可选 |
-| TCP | 5672 | epmd | 可选 |
-| TCP | 55672 | Erlang distribution | 可选 |
+| TCP | 80 | 通过 HTTP 访问 CloudBeaver 控制台 | 可选 |
+| TCP | 443 | 通过 HTTPS 访问 CloudBeaver 控制台 | 可选 |
+| TCP | 9090 | 通过 HTTP 访问 CloudBeaver 控制台 | 可选 |
 
 ## 版本号
 
@@ -101,19 +68,9 @@ lsb_release -a
 # Nginx  Version
 nginx -V
 
-# Java version
-java -v
-
 # Docker Version
 docker -v
 
-# MySQL version
-docker inspect rabbitmq-mysql | grep "MYSQL_VERSION"
+# CloudBeaver version
 
-# erlang  Version
-yum info erlang
-apt show erlang
-
-# RabbitMQ version
-rabbitmqctl status | grep RabbitMQ*
 ```
