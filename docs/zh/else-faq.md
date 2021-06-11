@@ -31,7 +31,7 @@ JDBC 驱动
 
 #### 如何更改 CloudBeaver 的默认方式方式
 
-修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的 `listen 80` 修改成类似 `listen 8090` 即可
+修改 [Nginx虚拟机主机文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项 `listen 80` 修改成类似 `listen 8090` 即可
 
 #### 数据库 root 用户对应的密码是多少？
 

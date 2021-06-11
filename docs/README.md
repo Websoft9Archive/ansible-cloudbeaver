@@ -6,9 +6,9 @@ home: false
 
 This documentation is provided by [Websoft9](https://www.websoft9.com/). It can help users to acquire skills of CloudBeaver Deployment, Installation, Configuration, HTTPS, SMTP, Backup, Upgrade, Connect Instance and more.
 
-[CloudBeaver](https://cloudbeaver-server.apache.org/) is the most widely deployed open source message broker. With more than 35,000 production deployments of CloudBeaver world-wide at small startups and large enterprises, CloudBeaver is the most popular open source message broker.
+[CloudBeaver](https://github.com/dbeaver/cloudbeaver) is a web-based database GUI tool which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2, Trino 
 
-![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-gui-websoft9.png)
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-demogui-websoft9.png)
 
 ---
 

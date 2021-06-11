@@ -15,9 +15,9 @@ Insufficient disk space and memory, incorrect configuration file may cause the f
 It is recommended to first check through the command.
 
 ```shell
-# restart CloudBeaver service
-systemctl status cloudbeaver
-journalctl -u cloudbeaver
+# CloudBeaver Container Service
+sudo docker logs cloudbeaver
+sudo docker stats cloudbeaver
 
 # view disk space
 df -lh
@@ -25,9 +25,3 @@ df -lh
 # view memory rate
 free -lh
 ```
-
-#### Error in Chrome when modify password?
-
-This error has nothing to do with CloudBeaver server. Just upgrade you local Chrome to solve it.
-
-![chrome error of CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-chromeerror-websoft9.png)

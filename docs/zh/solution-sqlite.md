@@ -11,10 +11,10 @@
 ## 配置
 
 1. 登录 CloudBeaver 控制台，打开：【Connection】>【Manual】，选择 **SQLite**
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconn-websoft9.png)
 
 2. 设置连接信息：主机地址、端口、账号密码（可以勾选是否保存），然后点击【Save】
-   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-connsetting-websoft9.png)
+   ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-openconnsqlite-websoft9.png)
 
 3. 设置信息保存后，使用这个 SQLite 连接，输入数据库的账号和密码
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-conlogin-websoft9.png)

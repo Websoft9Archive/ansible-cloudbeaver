@@ -34,7 +34,7 @@ This deployment solution is based on Docker and so you can upgrade CloudBeaver b
 
 2. Go to the code-server root directory, then pull new images
    ```
-   cd /data/wwwroot/cloudbeaver
+   cd /data/apps/cloudbeaver
    docker-compose pull
    ```
 3. Delete old container and recreate new container
@@ -42,5 +42,3 @@ This deployment solution is based on Docker and so you can upgrade CloudBeaver b
    docker-compose down -v
    docker-compose up -d
    ```
-
-Refer to the official docs: [Upgrading CloudBeaver](https://www.cloudbeaver.com/upgrade.html)

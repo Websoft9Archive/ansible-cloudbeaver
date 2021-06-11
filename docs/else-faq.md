@@ -1,27 +1,33 @@
 # FAQ
 
-#### How can I enable the debug mode of CloudBeaver service?
+#### 本项目中 CloudBeaver 采用何种安装方式？
 
-```
-systemctl stop cloudbeaver-server
-cloudbeaver-server console
-```
+Docker
+
+#### CloudBeaver 采用何种驱动连接数据库？
+
+JDBC 驱动
+
 
 #### Can I reset password of CloudBeaver by command?
 
-Yes, e.g `cloudbeaverctl change_password  admin newpassword`
+不可以，只支持控制台修改
+
+#### CloudBeaver 是否支持创建数据库？
+
+暂未发现此功能
+
+#### 如何更改 CloudBeaver 的默认方式方式
+
+修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的 `listen 80` 修改成类似 `listen 8090` 即可
 
 #### If there is no domain name, can I deploy CloudBeaver?
 
-Yes, access CloudBeaver by *http://Server's Internet IP:8161*.
+Yes, access CloudBeaver by *http://Server's Internet IP*.
 
 #### What is the password for the database root user?
 
 The password is stored in the server related file `/credentials/password.txt`.
-
-#### Is there a web-base GUI database management tool?
-
-Yes, phpMyAdmin is included. Visit by *http://Server's Internet IP:9090*.
 
 #### Is it possible to modify the source path of CloudBeaver?
 
@@ -32,7 +38,7 @@ No.
 Change owner(group) or permissions as below:
 
 ```shell
-chown -R apache.apache /data/wwwroot
+chown -R nginx.nginx /data/wwwroot
 find /data/wwwroot -type d -exec chmod 750 {} \;
 find /data/wwwroot -type f -exec chmod 640 {} \;
 ```

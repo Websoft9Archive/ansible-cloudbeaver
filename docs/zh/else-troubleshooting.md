@@ -8,7 +8,7 @@
 
 日志文件路径为：`/data/logs`。检索关键词 **Failed** 或者 **error** 查看错误
 
-#### CloudBeaver服务无法启动？
+#### CloudBeaver 容器无法启动？
 
 服务无法启动最常见的问题包括：磁盘空间不足，内存不足，配置文件错误。  
 建议先通过命令进行排查  
@@ -22,5 +22,5 @@ free -lh
 
 # 查看服务状态和日志
 sudo docker logs cloudbeaver
-sudo docker stats redmine-mysql
+sudo docker stats cloudbeaver
 ```

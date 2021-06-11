@@ -28,11 +28,11 @@ CloudBeaver 基于 Docker 部署，其升级流程：拉取镜像 > 删除容器
 
 > 升级之前请确保您已经完成了服务器的镜像（快照）备份
 
-1. 登录服务器，编辑 */data/wwwroot/cloudbeaver/.env* 文件，将版本变量的值修改为目标版本号
+1. 登录服务器，编辑 */data/apps/cloudbeaver/.env* 文件，将版本变量的值修改为目标版本号
 
 2. 拉取目标版本的镜像
    ```
-   cd /data/wwwroot/cloudbeaver
+   cd /data/apps/cloudbeaver
    docker-compose pull
    ```
    > 如果显示没有镜像可拉取，则无需升级

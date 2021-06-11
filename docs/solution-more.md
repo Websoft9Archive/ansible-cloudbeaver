@@ -2,10 +2,6 @@
 
 Each of the following solutions has been proved to be effective and we hope it can give you help.
 
-## Configuration 
-
-Refer to the official docs: https://www.cloudbeaver.com/configure.html
-
 ## Binding Domain
 
 The precondition for binding a domain is that CloudBeaver can accessed by domain name.
@@ -37,16 +33,29 @@ There are two main measures to reset password.
 
 Take the steps below:
 
-1. log in the CloudBeaver backend, open 【Manage】>【Staff】 and find the user account, of which you want to change password;
+1. log in the CloudBeaver backend, 右上角打开：【Administrator】>【User】，找到所需修改密码的账号对象
+  ![CloudBeaver 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-modifypw-websoft9.png)
 
-2. start to change the password.
+2. 开始修改密码，点击【Save】后生效
 
 ### Forgot Password
 
-Try to retrieve your password through e-mail when forgot it.
+Try to retrieve your password 只能通过重置 CloudBeaver 容器的方式找回：
 
-Follow the steps below:
+1. 使用 SSH 工具连接  CloudBeaver 服务器
 
-1. complete [SMTP setting](/solution-smtp.md);
+2. 依次运行下面的命令
+   ```
+   cd /data/apps/cloudbeaver
+   docker-compose down -v
+   docker-compose pull
+   docker-compose up -d
+   ```
 
-2. open
+## 驱动管理
+
+参考官方文档[Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
+
+## 导出数据
+
+![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-exportdata-websoft9.png)
