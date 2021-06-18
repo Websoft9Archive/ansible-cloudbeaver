@@ -33,6 +33,7 @@ module.exports = [
         children: [
           '/admin-services',
           ['https://support.websoft9.com/docs/linux/webs-nginx.html','Nginx'],
+          ['https://support.websoft9.com/docs/linux/docker','Docker'],
           ['https://support.websoft9.com/docs/linux/admin-practices.html','Linux'],
         ]
       },

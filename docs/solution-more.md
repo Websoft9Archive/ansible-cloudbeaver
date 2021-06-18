@@ -33,18 +33,18 @@ There are two main measures to reset password.
 
 Take the steps below:
 
-1. log in the CloudBeaver backend, 右上角打开：【Administrator】>【User】，找到所需修改密码的账号对象
-  ![CloudBeaver 修改密码](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-modifypw-websoft9.png)
+1. Login to CloudBeaver, Go to【Administrator】>【User】 of top right menu and find your account
+  ![CloudBeaver modify password](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-modifypw-websoft9.png)
 
-2. 开始修改密码，点击【Save】后生效
+2. Modify password and click 【Save】
 
 ### Forgot Password
 
-Try to retrieve your password 只能通过重置 CloudBeaver 容器的方式找回：
+Retrieve your password need to recreate container
 
-1. 使用 SSH 工具连接  CloudBeaver 服务器
+1. Use **SSH** to connect CloudBeaver instance
 
-2. 依次运行下面的命令
+2. Run the below commands
    ```
    cd /data/apps/cloudbeaver
    docker-compose down -v
@@ -52,10 +52,10 @@ Try to retrieve your password 只能通过重置 CloudBeaver 容器的方式找�
    docker-compose up -d
    ```
 
-## 驱动管理
+## Drivers
 
 参考官方文档[Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
 
-## 导出数据
+## Export data
 
 ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-exportdata-websoft9.png)

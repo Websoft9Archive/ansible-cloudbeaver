@@ -29,7 +29,7 @@ JDBC 驱动
 
 可以，访问`http://服务器公网IP` 即可
 
-#### 如何更改 CloudBeaver 的默认方式方式
+#### 如何更改 CloudBeaver 的默认访问方式？
 
 修改 [Nginx虚拟机主机文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项 `listen 80` 修改成类似 `listen 8090` 即可
 

@@ -10,7 +10,7 @@
 
 ## CloudBeaver 安装向导
 
-1. 使用本地电脑浏览器访问网址：*http://域名* 或 *http://服务器公网IP*, 进入初始化页面
+1. 使用本地电脑浏览器访问网址：*http://服务器公网IP*, 进入初始化页面
    ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/zh/cloudbeaver/cloudbeaver-wizard001-websoft9.png)
 
 2. 设置用户名和密码，然后点击【Next】进入下一步
@@ -39,6 +39,6 @@
 
 您的服务器对应的安全组 80 端口没有开启（入规则），导致浏览器无法访问到服务器的任何内容
 
-#### 是否可以禁止通过 80 端口访问 CloudBeaver ？
-
-可以，本部署方案通过 Nginx 进行转发访问 CloudBeaver （实际上是 9090 端口），修改 Nginx 配置即可
+#### 是否可以通过其他端口访问 CloudBeaver？
+ 
+9090，默认 80 端口是通过 Nginx 转发 9090 端口后结果

@@ -10,22 +10,22 @@ If you have completed the CloudBeaver deployment, follow the steps below to star
 
 ## CloudBeaver Installation Wizard
 
-1. Use local browser to access the URL *http://DNS* or *http://Server's Internet IP*. You will enter installation wizard of CloudBeaver.
+1. Use local browser to access the URL *http://Server's Internet IP*. enter to CloudBeaver wizard
    ![](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard001-websoft9.png)
 
-2. 设置用户名和密码，然后点击【Next】进入下一步
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard002-websoft9.png)
+2. Set your username and password, then click 【Next】 button
+   ![init CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard002-websoft9.png)
 
-3. 继续点击【Next】进入下一步，最后点击【FINISH】完成初始化
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard003-websoft9.png)
+3. Continue click【Next】 and click 【FINISH】 to complete it
+   ![init CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard003-websoft9.png)
 
-4. 默认已经存在一个 SQlite 的演示连接
-   ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard004-websoft9.png)
+4. You can see a SQlite demo connection now
+   ![init CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard004-websoft9.png)
 
-5. 通过：【Administrator】>【Connection Management】，删除【SQLite - Chinook (Sample)】，避免遭受 SQL 注入攻击
+5. Go to: 【Administrator】>【Connection Management】, delete【SQLite - Chinook (Sample)】 to avoid security trouble
    ![初始化 CloudBeaver](https://libs.websoft9.com/Websoft9/DocsPicture/en/cloudbeaver/cloudbeaver-wizard005-websoft9.png)
 
-6. 再回到主页，默认的 SQLite 演示连接已经不存在
+6. Go to home page, you can't see the SQLite demo now
 
 > More guide about CloudBeaver, please refer to [CloudBeaver Documentation](https://cloudbeaver.io/docs/).
 
@@ -39,6 +39,6 @@ Coming soon...
 
 Your TCP:80 of Security Group Rules is not allowed, so there is no response from Chrome or Firefox.
 
-#### 是否可以禁止通过 80 端口访问 CloudBeaver ？
-
-可以，本部署方案通过 Nginx 进行转发访问 CloudBeaver （实际上是 9090 端口），修改 Nginx 配置即可
+#### Can I access CloudBeaver by other port?
+ 
+9090, this deployment solution use Nginx proxy from 9090 to 80

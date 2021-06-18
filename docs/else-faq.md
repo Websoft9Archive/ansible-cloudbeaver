@@ -1,25 +1,25 @@
 # FAQ
 
-#### 本项目中 CloudBeaver 采用何种安装方式？
+#### What installation method is used for CloudBeaver?
 
 Docker
 
-#### CloudBeaver 采用何种驱动连接数据库？
+#### What kind of driver does CloudBeaver use to connect to the database?
 
-JDBC 驱动
+JDBC Driver
 
 
 #### Can I reset password of CloudBeaver by command?
 
-不可以，只支持控制台修改
+No, you just modify password by CloudBeaver Console
 
-#### CloudBeaver 是否支持创建数据库？
+#### Can I create Database from CloudBeaver?
 
-暂未发现此功能
+NO
 
-#### 如何更改 CloudBeaver 的默认方式方式
+#### Can I access CloudBeaver from other port?
 
-修改 [Nginx虚拟机主机配置文件](/zh/stack-components.md#nginx)，将其中的 **server_name** 项的 `listen 80` 修改成类似 `listen 8090` 即可
+Yes, you need to modify [Nginx vhost file](/stack-components.md#nginx), and change **server_name** 's `listen 80` to `listen 8090` as sample
 
 #### If there is no domain name, can I deploy CloudBeaver?
 

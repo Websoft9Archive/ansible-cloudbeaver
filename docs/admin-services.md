@@ -20,16 +20,16 @@ sudo systemctl stop docker
 sudo systemctl status docker
 ```
 
-### Docker-compose 服务
+### Docker-compose
 
 ```
-#创建容器编排
+# Create containers
 sudo docker-compose up
 
-#创建容器编排并重建有变化的容器
+# Create containers at backend
 sudo docker-compose up -d
 
-#启动/重启
+# Restart/Stop/Start
 sudo docker-compose start
 sudo docker-compose stop
 sudo docker-compose restart

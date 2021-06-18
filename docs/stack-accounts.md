@@ -8,8 +8,7 @@ Here are the required username and password for CloudBeaver installation and con
 
 ## CloudBeaver
 
-* CloudBeaver administrator username: `admin`
-* CloudBeaver administrator password: Get it form the file of your server */credentials/password.txt*
+Set by yourself when at install wizard step
 
 ## Linux
 
