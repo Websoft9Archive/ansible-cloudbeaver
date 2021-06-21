@@ -54,7 +54,7 @@ Retrieve your password need to recreate container
 
 ## Drivers
 
-参考官方文档[Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
+Refer to [Driver managements](https://cloudbeaver.io/docs/Driver-managements/)
 
 ## Export data
 
