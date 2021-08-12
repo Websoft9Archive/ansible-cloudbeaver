@@ -52,7 +52,7 @@ Redis 日志文件： */var/log/redis/redis.log*
 | --- | --- | --- | --- |
 | TCP | 80 | 通过 HTTP 访问 CloudBeaver 控制台 | 必选 |
 | TCP | 443 | 通过 HTTPS 访问 CloudBeaver 控制台 | 可选 |
-| TCP | 9090 | 通过 HTTP 访问 CloudBeaver 控制台 | 可选 |
+| TCP | 9093 | 通过 HTTP 访问 CloudBeaver 控制台 | 可选 |
 
 ## 版本号
 
