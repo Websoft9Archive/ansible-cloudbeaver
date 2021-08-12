@@ -49,7 +49,7 @@ The following are the ports you may use:
 | --- | --- | --- | --- |
 | TCP | 80 | HTTP to access CloudBeaver | Required |
 | TCP | 443 | HTTPS to access CloudBeaver | Optional |
-| TCP | 9090 | HTTP to access CloudBeaver | Optional |
+| TCP | 9093 | HTTP to access CloudBeaver | Optional |
 
 ## Version
 
