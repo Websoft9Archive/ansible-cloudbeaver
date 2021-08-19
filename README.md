@@ -6,7 +6,7 @@
 
 [English](/README.md) | [简体中文](/README-zh.md)  
 
-**CloudBeaver Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [CloudBeaver Community](https://github.com/dbeaver/cloudbeaver) based on Ansible and shell. It helps user install CloudBeaver and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
+**CloudBeaver Cloud Installer**, developed by [Websoft9](https://www.websoft9.com), is an automatic installation program of [CloudBeaver](https://github.com/dbeaver/cloudbeaver) based on Ansible and shell. It helps user install CloudBeaver and pre-configure required items automatically and users only need to run a command on Linux. It simplifies the complicated installation and initialization process.  
 
 ## System Requirement
 
@@ -14,16 +14,16 @@ System Requirement to install this repository are as following：
 
 | Conditions       | Details                               | Notes                |
 | ------------------- | --------------------------------| -------------------- |
-| Operating System   | CentOS7.x, Ubuntu, Amazon Linux2 | Optional                 |
+| Operating System   | CentOS7.x, Ubuntu20.04, Amazon Linux2 | Optional                 |
 | Public Cloud     | AWS, Azure, Alibaba Cloud, HUAWEI ClOUD, Tencent Cloud    | Optional                 |
 | Private Cloud     | KVM, VMware, VirtualBox, OpenStack    | Optional                 |
-| Server Configuration | vCPU no less than 1 core, Memory no less than  2 GIB, Storage no less than 10 GB, Bandwidth no less than 100M ||
+| Server Configuration | vCPU no less than 1 core, Memory no less than 1 GIB, Storage no less than 20 GB, Swap no less than 2GB |Bandwidth no less than 100M|
 
 To learn more information, please view [Installation & Configuration](https://cloudbeaver.io/docs/).
 
 ## Ecosystem
 
-Core components of this repository: CloudBeaver, Docker, Nginx
+Core components of this repository:  Nginx, Docker, CloudBeaver on docker, pgadmin on docker
 
 Learn more about [Parameters](/docs/stack-components.md).
 
@@ -50,10 +50,6 @@ Follow our [CloudBeaver image](https://apps.websoft9.com/cloudbeaver) for instal
 
 **[Administrator Guide](https://support.websoft9.com/docs/cloudbeaver)** 
 
-## Changelog
-
-Detailed changes are documented in the [CHANGELOG](/CHANGELOG.md).
-
 ## License
 
 [LGPL-3.0](/License.md), Additional Terms: It is not allowed to publish free or paid image based on this repository in any Cloud platform's Marketplace.
@@ -64,10 +60,16 @@ This program provided by Websoft9 contains a series of software with separate co
 
 ## FAQ
 
+#### How to install and view the latest release?
+
+This repository install way is Docker install, you can  view the version from [Official URL](https://hub.docker.com/r/dbeaver/cloudbeaver/tags?page=1&ordering=last_updated).  
+We will check [Release version](https://github.com/Websoft9/ansible-cloudbeaver/releases) regularly. Update and test this project to ensure that users can successfully install the required version of CloudBeaver.
+
 #### Can I run this repository on Ansible Tower? 
 
 Yes.
 
-#### How to install and view the latest release?
+#### Although the results of the deploy by image are consistent with the results of deploy by script, what is the difference between the two deployment methods?
 
-This deployment solution always install the latest version of CloudBeaver by Docker, you can get the CloudBeaver version from [CloudBeaver repository](https://github.com/dbeaver/cloudbeaver/releases).
+Suggest you read the document [Deploy by Image vs Deploy by Script](https://support.websoft9.com/docs/faq/bz-product.html#deployment-comparison).
+
